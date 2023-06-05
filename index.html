@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<title>Qianshuang Meng</title>
+</head>
+<body>
+
+<br>
+
+
+<div class="container-lg">
+
+  <div class="sticky-top" style="background-color: #FFFFFF;padding-bottom: 15px;padding-top: 15px;"> 
+    <div class="row">
+      <div class="col-md-0" > </div>
+      <div class="col-md-12" > 
+          <h1 ><font color="#090909">Qianshuang Meng / 孟千爽</font></h1>
+          <h5>Email: <a href="">qs_meng@nuaa.edu.cn</a> </h5>
+      </div>
+
+    </div>
+
+    <!-- <hr style="filter: alpha(opacity=100,finishopacity=0,style=3); height:1px" width="100%" color="#000000" size="5" /> -->
+    <!-- <br> -->
+  </div>
+
+  <!-- <h5 class="page-header"> </h5> -->
+  <div class="row  overflow-scroll" style="background-color: #FCFCFC;">
+
+    <div class="col-md-2" > 
+
+    <div>
+      <div >
+          <img decoding="async" src="./pic/mqs.jpg" class="img-thumbnail">
+      </div>
+          <div href="javascript:void(0)" class="like-icon " data-key="on" style="position: relative;"></div>
+          <div class="like-num " style="">66</div>
+
+      <div style="font-size: 12px;">
+        <!-- <h2>Basic Information</h2> -->
+<!--           <ul class="list-unstyled">
+            <li>
+              <ul>
+                <li>NUAA</li>
+                <li>Computer Science</li>
+                <li><a href="">qs_meng@nuaa.edu.cn</a></li>
+              </ul>
+            </li>
+          </ul> -->
+<!--           School: NUAA<br>
+          Major: Software Engineering<br> -->
+          
+      </div>
+    </div>
+
+    </div>
+    <div class="col-md-10"> 
+      <h2> 个人简介 </h2>
+      <p>南京航空航天大学，计算机科学与技术学院，2022级研究生<br>
+         导师： <a href="https://weiqin-zou.github.io/"  target="_blank">邹卫琴</a>
+      </p>
+
+      <h2> Titles </h2>
+      <p>Intermediate software designer / 软件中级设计师</p>
+
+      <h2> Research Interests </h2>
+      <p>Software Engineering, Bug Report, Natural Language Processing, Deep Learning</p>
+      
+    </div>
+  </div>
+  
+
+
+    
+  <!-- <h2> Education Experience </h2> -->
+  <!-- <div class="container-sm" style="width:75%;margin-left: 0;"> -->
+<!--     <table class="table" style="width: 75%;">
+       <caption>边框表格布局</caption> -->
+<!--       <thead class="thead-light">
+        <tr>
+          <th >Time</th>
+          <th w-75>School</th>
+          <th >Degree</th>
+          <th >Major</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>09.2022-Now</td>
+          <td>Nanjing University of Aeronautics and Astronautics</td>
+          <td>\</td>
+          <td>Computer Science</td>
+        </tr>
+        <tr>
+          <td>09.2018-06.2022</td>
+          <td>Nantong Unveristy</td>
+          <td>Bachelor</td>
+          <td>Software Engineering</td>
+        </tr>
+      </tbody>
+    </table> -->
+
+  <!-- </div> -->
+
+</div>
+
+
+<style type="text/css">
+        .like-icon {
+            width: 30px;
+            height: 30px;
+            z-index: 7;
+            background: url("./pic/white.svg") no-repeat center;
+            background-size: 30px 30px;
+        }
+
+        .on {
+            background: url("./pic/red.svg") no-repeat center;
+            background-size: 30px 30px;
+        }
+
+        .like-num {
+            width: 30px;
+            height: 30px;
+            margin-top: 5px;
+            text-align: center;
+            font-size: 10px;
+        }
+</style>
+<script>
+    $(".like-icon").on("click", function(e) {
+        and(e);
+    })
+    var like_num = Number($('.like-num').html());
+    function and(e) {
+
+        if ($('.like-icon').attr('data-key') == 'on') {
+            $('.like-icon').addClass('on');
+            like_num = like_num + 1; 
+            $('.like-num').html(like_num);
+        } 
+
+        var $i = $("<b>").text("+" + 1);
+        var x = e.pageX,
+            y = e.pageY;
+        $i.css({
+            top: y - 20,
+            left: x,
+            position: "absolute",
+            color: "#E94F06"
+        });
+        $("body").append($i);
+        $i.animate({
+            top: y - 120,
+            opacity: 0,
+            "font-size": "1.4em"
+        }, 1500, function() {
+            $i.remove();
+        });
+        e.stopPropagation();
+    }
+</script>
+
+</body>
+</html>
+
